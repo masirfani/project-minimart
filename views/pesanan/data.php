@@ -32,7 +32,7 @@
 
 
     <?php
-        $keranjang = count($_SESSION['cart']);
+        $keranjang = count($_SESSION['cart'] ?? []);
     ?>
     <a href="keranjang.php" class="btn btn-success" style="position: absolute;bottom: 20px; right: 20px;">
         Lihat Keranjang

@@ -13,7 +13,7 @@
             $foto = uploadAndConvertImage($_FILES['foto']);
         }
 
-        $query = "INSERT INTO produk VALUES(NULL, '$nama','$harga','$stok','$foto')";
+        $query = "INSERT INTO produk VALUES(NULL, '$nama','$harga','$foto')";
 
         $connect->query($query);
 
@@ -34,15 +34,13 @@
             $foto = uploadAndConvertImage($_FILES['foto']);
             $query = "UPDATE produk SET 
                         nama = '$nama',
-                        harga = '$harga',
-                        stok = '$stok',  
+                        harga = '$harga',  
                         foto = '$foto'  
                         WHERE id_produk = $id_produk";
         }else{
             $query = "UPDATE produk SET 
                         nama = '$nama',
                         harga = '$harga',
-                        stok = '$stok'
                         WHERE id_produk = $id_produk";
         }
 

@@ -24,8 +24,8 @@
                         <input type="text" name="nama" class="form-control mb-2" required value="<?= $see->nama ?>" placeholder="Masukkan Nama...">
                         <label>Harga</label>
                         <input type="number" name="harga" class="form-control mb-2" required value="<?= $see->harga ?>" placeholder="Masukkan Harga...">
-                        <label>Stok</label>
-                        <input type="number" name="stok" class="form-control mb-2" required value="<?= $see->stok ?>" placeholder="Masukkan Stok...">
+                        <!-- <label>Stok</label>
+                        <input type="number" name="stok" class="form-control mb-2" required value="<?= $see->stok ?>" placeholder="Masukkan Stok..."> -->
                         <label>Foto</label>
                         <input type="file" name="foto" class="form-control mb-2" placeholder="Masukkan Foto...">
                         <button class="btn btn-primary btn-sm" name="update">Simpan Perubahan</button>

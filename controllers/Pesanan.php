@@ -14,7 +14,7 @@
             $_SESSION['cart'][$id_produk] = [
                 "nama"     => $see->nama,
                 "harga"    => $see->harga,
-                "stok"     => $see->stok,
+                // "stok"     => $see->stok,
                 "foto"     => $see->foto,
                 "qty"      => $qty,
                 "subtotal" => $qty * $see->harga,

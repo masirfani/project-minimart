@@ -15,7 +15,6 @@
                                 <th>No</th>
                                 <th>Nama</th>
                                 <th>Harga</th>
-                                <th>Stok</th>
                                 <th>Foto</th>
                                 <th></th>
                             </tr>
@@ -33,7 +32,6 @@
                                 <td><?= $no++ ?></td>
                                 <td><?= $see->nama ?></td>
                                 <td><?= $see->harga ?></td>
-                                <td><?= $see->stok ?></td>
                                 <td><img src="../../assets/uploads/produk/<?= $see->foto ?>" alt="" class="img-fluid rounded" width="150"></td>
                                 <td>
                                     <a href="form-edit.php?id_produk=<?= $see->id_produk ?>" class="btn btn-warning btn-sm">Edit</a>

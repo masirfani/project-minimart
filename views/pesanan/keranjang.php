@@ -24,8 +24,11 @@
                                 include "../../koneksi.php";
                                 $no = 1;
                                 $total = 0;
+                                $pesan = "Halo Kak saya ingin memesan barang barang ini %0A";
                                 foreach ($_SESSION['cart'] as $key => $see) {
-                                    $total += $see['subtotal']
+                                    $total += $see['subtotal'];
+                                    
+                                    $pesan .= sprintf("%s. %s - %s berjumlah %s : %s", $no, $see['nama'], formatRupiah($see['harga']), $see['qty'], formatRupiah($see['subtotal']))."%0A";
                             ?>
                             <tr>
                                 <td><?= $no++ ?></td>
@@ -41,6 +44,11 @@
                             </tr>
                         </tbody>
                     </table>
+                    <?php
+                        $pesan .= "%0A";
+                        $pesan .= "*Total semua : ".formatRupiah($see['subtotal'])."*";
+                    ?>
+                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=6285222255802&text=<?= $pesan ?>&type=phone_number&app_absent=0">Pesan</a>
                 </div>
             </div>
         </div>
