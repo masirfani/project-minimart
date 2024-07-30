@@ -26,10 +26,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+                        <a class="nav-link" href="../produk/data.php">Produk</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Produk</a>
+                        <a class="nav-link" href="../auth/setting.php">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../../controllers/Auth.php?logout=true">Logout</a>

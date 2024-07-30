@@ -3,9 +3,11 @@
 
     // INSERT / CREATE DATA
     if (isset($_POST['create'])) {
-        $nama  = $_POST['nama'];
-        $harga = $_POST['harga'];
-        $stok  = $_POST['stok'];
+        $nama           = $_POST['nama'];
+        $harga          = $_POST['harga'];
+        $stok           = $_POST['stok'];
+        $maksimal_input = $_POST['maksimal_input'];
+        $deskripsi      = $_POST['deskripsi'];
 
         // upload foto
         $foto  = "";
@@ -13,40 +15,48 @@
             $foto = uploadAndConvertImage($_FILES['foto']);
         }
 
-        $query = "INSERT INTO produk VALUES(NULL, '$nama','$harga','$foto')";
+        $query = "INSERT INTO produk VALUES(NULL, '$nama', '$harga', '$stok', '$maksimal_input', '$deskripsi','$foto')";
 
         $connect->query($query);
 
-        header("location:../views/product/data.php");
+        header("location:../views/produk/data.php");
     }
 
     // UPDATE DATA
     if (isset($_POST['update'])) {
-        $id_produk = $_POST['id_produk'];
-        $foto_lama = $_POST['foto_lama'];
-        $nama      = $_POST['nama'];
-        $harga     = $_POST['harga'];
-        $stok      = $_POST['stok'];
+        $id_produk      = $_POST['id_produk'];
+        $foto_lama      = $_POST['foto_lama'];
+        $nama           = $_POST['nama'];
+        $harga          = $_POST['harga'];
+        $stok           = $_POST['stok'];
+        $maksimal_input = $_POST['maksimal_input'];
+        $deskripsi      = $_POST['deskripsi'];
 
         // upload foto
         if (isset($_FILES['foto']) && $_FILES['foto']['error'] == 0) {
             unlink("../assets/uploads/produk/$foto_lama");
             $foto = uploadAndConvertImage($_FILES['foto']);
             $query = "UPDATE produk SET 
-                        nama = '$nama',
-                        harga = '$harga',  
-                        foto = '$foto'  
+                        nama           = '$nama',
+                        harga          = '$harga',  
+                        stok           = '$stok',  
+                        maksimal_input = '$maksimal_input',  
+                        deskripsi      = '$deskripsi',  
+                        foto           = '$foto'  
                         WHERE id_produk = $id_produk";
         }else{
             $query = "UPDATE produk SET 
-                        nama = '$nama',
-                        harga = '$harga',
+                        nama           = '$nama',
+                        harga          = '$harga',  
+                        stok           = '$stok',  
+                        maksimal_input = '$maksimal_input',  
+                        deskripsi      = '$deskripsi'  
                         WHERE id_produk = $id_produk";
         }
 
         $connect->query($query);
 
-        header("location:../views/product/data.php");
+        header("location:../views/produk/data.php");
     }
     
     // DELETE DATA
@@ -59,7 +69,7 @@
     
         $connect->query($query);
     
-        header("location:../views/product/data.php");
+        header("location:../views/produk/data.php");
     }
 
 
