@@ -22,7 +22,7 @@
                             </div>
                             <?php if($see->stok == "Tersedia"): ?>
                                 <input type="hidden" name="id_produk" value="<?= $see->id_produk ?>">
-                                <input type="number" name="qty" class="form-control mt-4" placeholder="mau pesan berapa?" min="1" value="<?= $_SESSION['cart'][$see->id_produk]['qty'] ?? 1  ?>" max="<?= $see->maksimal_input ?>">
+                                <input type="number" name="qty" class="form-control mt-4" placeholder="mau pesan berapa?" min="1" value="<?= $_SESSION['cart'][$see->id_produk]['qty'] ?? 1  ?>" max="100">
                                 <button class="btn btn-info btn-sm mt-3 w-100" name="tambah-keranjang">Masukkan Keranjang</button>
                             <?php else: ?>    
                                 <button class="btn btn-info btn-sm mt-3 w-100" disabled>Stok Habis</button>

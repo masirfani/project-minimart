@@ -6,7 +6,7 @@
         $nama           = $_POST['nama'];
         $harga          = $_POST['harga'];
         $stok           = $_POST['stok'];
-        $maksimal_input = $_POST['maksimal_input'];
+        // $maksimal_input = $_POST['maksimal_input'];
         $deskripsi      = $_POST['deskripsi'];
 
         // upload foto
@@ -15,7 +15,7 @@
             $foto = uploadAndConvertImage($_FILES['foto']);
         }
 
-        $query = "INSERT INTO produk VALUES(NULL, '$nama', '$harga', '$stok', '$maksimal_input', '$deskripsi','$foto')";
+        $query = "INSERT INTO produk VALUES(NULL, '$nama', '$harga', '$stok', '$deskripsi','$foto')";
 
         $connect->query($query);
 
@@ -29,7 +29,7 @@
         $nama           = $_POST['nama'];
         $harga          = $_POST['harga'];
         $stok           = $_POST['stok'];
-        $maksimal_input = $_POST['maksimal_input'];
+        // $maksimal_input = $_POST['maksimal_input'];
         $deskripsi      = $_POST['deskripsi'];
 
         // upload foto
@@ -40,7 +40,6 @@
                         nama           = '$nama',
                         harga          = '$harga',  
                         stok           = '$stok',  
-                        maksimal_input = '$maksimal_input',  
                         deskripsi      = '$deskripsi',  
                         foto           = '$foto'  
                         WHERE id_produk = $id_produk";
@@ -49,7 +48,6 @@
                         nama           = '$nama',
                         harga          = '$harga',  
                         stok           = '$stok',  
-                        maksimal_input = '$maksimal_input',  
                         deskripsi      = '$deskripsi'  
                         WHERE id_produk = $id_produk";
         }

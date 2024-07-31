@@ -35,7 +35,7 @@
                                 <td><?= $no++ ?></td>
                                 <td><?= $see->nama ?></td>
                                 <td><?= $see->harga ?></td>
-                                <td><?= $see->maksimal_input ?></td>
+                                <!-- <td><?= $see->maksimal_input ?></td> -->
                                 <td><?= $see->deskripsi ?></td>
                                 <td><img src="../../assets/uploads/produk/<?= $see->foto ?>" alt="" class="img-fluid rounded" width="150"></td>
                                 <td class="mt-2 badge <?= ($see->stok == "Tersedia") ? 'text-bg-success' : 'text-bg-secondary'  ?>"><?= $see->stok ?></td>

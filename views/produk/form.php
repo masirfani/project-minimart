@@ -14,8 +14,8 @@
                         <input type="text" name="nama" class="form-control mb-2" required placeholder="Masukkan Nama...">
                         <label>Harga</label>
                         <input type="number" name="harga" class="form-control mb-2" required placeholder="Masukkan Harga...">
-                        <label>Input Maksimal</label>
-                        <input type="number" name="maksimal_input" class="form-control mb-2" required placeholder="Masukkan Input Maksimal...">
+                        <!-- <label>Input Maksimal</label>
+                        <input type="number" name="maksimal_input" class="form-control mb-2" required placeholder="Masukkan Input Maksimal..."> -->
                         <label>Stok</label>
                         <div class="mb-2">
                             <div class="form-check form-check-inline">
