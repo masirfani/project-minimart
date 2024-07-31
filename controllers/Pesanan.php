@@ -10,7 +10,7 @@
         $execute   = $connect->query($query);
         $see       = mysqli_fetch_object($execute);
 
-        if (empty($_SESSION['cart'][$id_produk])) {
+        // if (empty($_SESSION['cart'][$id_produk])) {
             $_SESSION['cart'][$id_produk] = [
                 "nama"     => $see->nama,
                 "harga"    => $see->harga,
@@ -19,10 +19,10 @@
                 "qty"      => $qty,
                 "subtotal" => $qty * $see->harga,
             ];
-        }else{
-            $_SESSION['cart'][$id_produk]['qty'] += $qty;
-            $_SESSION['cart'][$id_produk]['subtotal'] = $_SESSION['cart'][$id_produk]['qty'] * $see->harga;
-        }
+        // }else{
+        //     $_SESSION['cart'][$id_produk]['qty'] = $qty;
+        //     $_SESSION['cart'][$id_produk]['subtotal'] = $_SESSION['cart'][$id_produk]['qty'] * $see->harga;
+        // }
 
         header("location:../views/pesanan/data.php");
     }

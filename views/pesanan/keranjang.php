@@ -48,7 +48,7 @@
                         $pesan .= "%0A";
                         $pesan .= "*Total semua : ".formatRupiah($see['subtotal'])."*";
                     ?>
-                    <a target="_blank" href="https://api.whatsapp.com/send/?phone=6285222255802&text=<?= $pesan ?>&type=phone_number&app_absent=0">Pesan</a>
+                    <a class="btn btn-success btn-sm float-end" target="_blank" href="https://api.whatsapp.com/send/?phone=6285222255802&text=<?= $pesan ?>&type=phone_number&app_absent=0">Pesan</a>
                 </div>
             </div>
         </div>
